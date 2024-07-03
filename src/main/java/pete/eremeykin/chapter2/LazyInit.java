@@ -1,5 +1,7 @@
 package pete.eremeykin.chapter2;
 
+import pete.eremeykin.FromTheInternet;
+import pete.eremeykin.Listing;
 import pete.eremeykin.NotThreadSafe;
 import pete.eremeykin.ThreadSafe;
 
@@ -13,7 +15,7 @@ interface LazyInit {
         }
     }
 
-    // Listing 2.3
+    @Listing("2.3")
     @NotThreadSafe
     class LazyInitRace implements LazyInit {
 
@@ -30,6 +32,7 @@ interface LazyInit {
         }
     }
 
+    @FromTheInternet("https://en.wikipedia.org/wiki/Initialization-on-demand_holder_idiom")
     @ThreadSafe
     class LazyInitHolderIdiom implements LazyInit {
         public LazyInitHolderIdiom() {}

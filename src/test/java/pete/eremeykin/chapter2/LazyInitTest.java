@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import pete.eremeykin.ThreadUtils;
+import pete.eremeykin.utils.ThreadUtils;
 import pete.eremeykin.chapter2.LazyInit.ExpensiveObject;
 import pete.eremeykin.chapter2.LazyInit.LazyInitHolderIdiom;
 import pete.eremeykin.chapter2.LazyInit.LazyInitRace;
@@ -29,7 +29,7 @@ class LazyInitTest {
 
     @ParameterizedTest
     @MethodSource("factory")
-    void testCanGetMultipleInstances(LazyInit objectUnderTest, boolean isThreadSafe) {
+    void shouldProduceMultipleInstancesWhenNotThreadSafe(LazyInit objectUnderTest, boolean isThreadSafe) {
         LazyInit lazyInitRace = objectUnderTest;
         Set<ExpensiveObject> createdInstances = ConcurrentHashMap.newKeySet();
         int numberOfThreads = 100;

@@ -3,7 +3,7 @@ package pete.eremeykin.chapter2;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import pete.eremeykin.ThreadUtils;
+import pete.eremeykin.utils.ThreadUtils;
 
 import java.math.BigInteger;
 import java.util.Random;
@@ -21,7 +21,7 @@ class CountingFactorizerTest {
     }
 
     @Test
-    void shouldFailConcurrencyTest() {
+    void shouldPassConcurrencyTest() {
         int calculationsPerThread = 1000;
         int numberOfThreads = 10;
         ThreadUtils.fireAtOnce(
