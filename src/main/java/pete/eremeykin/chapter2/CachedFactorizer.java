@@ -1,11 +1,13 @@
 package pete.eremeykin.chapter2;
 
+import pete.eremeykin.Listing;
 import pete.eremeykin.PrimeCalculator;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
+@Listing("2.8")
 public class CachedFactorizer implements Factorizer {
     private BigInteger lastNumber;
     private List<Integer> lastFactors;
