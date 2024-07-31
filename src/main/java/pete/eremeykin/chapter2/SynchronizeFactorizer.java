@@ -7,7 +7,7 @@ import java.math.BigInteger;
 import java.util.List;
 
 @Listing("2.6")
-class SynchronizeFactorizer implements Factorizer {
+public class SynchronizeFactorizer implements Factorizer {
     private BigInteger lastNumber;
     private List<Integer> lastFactors;
 

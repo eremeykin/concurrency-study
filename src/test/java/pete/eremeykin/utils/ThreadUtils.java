@@ -18,7 +18,7 @@ public class ThreadUtils {
         }))).toList();
         threads.forEach(Thread::start);
         withNoInterruption(() -> {
-            readyThreadLatch.await();
+//            readyThreadLatch.await();
             callingThreadLatch.countDown();
             for (Thread t : threads) {
                 t.join();

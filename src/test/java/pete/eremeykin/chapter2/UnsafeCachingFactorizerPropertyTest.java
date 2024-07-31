@@ -54,7 +54,6 @@ class UnsafeCachingFactorizerPropertyTest {
                 random.nextInt(MAX_ARG)
         ).toList();
         Factorizer factorizer = new UnsafeCachingFactorizer();
-//        Factorizer factorizer = new StatelessFactorizer();
         AtomicInteger currentIndex = new AtomicInteger(0);
         List<IndependentExecutor> executors = IntStream.range(0, NUMBER_OF_THREADS).mapToObj((i) ->
                         new IndependentExecutor(currentIndex, inputNumbers, factorizer))

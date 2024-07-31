@@ -13,6 +13,11 @@ public class PrimeCalculator {
     }
 
     public List<Integer> calculate(BigInteger number) {
+        try {
+            Thread.sleep(10L);
+        } catch (InterruptedException e) {
+
+        }
         PrimeCalculator primeCalculator = new PrimeCalculator();
         return primeCalculator.doCalculate(number);
     }
